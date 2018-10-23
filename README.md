@@ -1,31 +1,87 @@
 # Bug Fix Lab
 
-## Learning Goals
-
-- Identify problematic anti-patterns in code
-
 ## Introduction
 
-An anti-pattern is a bad solution to a problem. In programming, anti-patterns
-are common mistakes programmers make that might seem to solve a problem
-initially but often introduce new, additional problems. These mistakes appear
-often enough in programming that we can learn how to identify them, which then
-empowers us to eliminate them from our own code and incorporate better
-solutions.
+In this module we're going to look at the fundamental behaviors of programmers.
+While it might _feel_ basic, focusing here has a force-multiplying effect.
+Improvements here magnify through every second of your time programming.
 
-### Identify Potentially Problematic Anti-Patterns in Code
+It's similar to martial arts, dancing, or practicing an instrument. The master
+of Tai Chi is known by a perfect, centered horse stance. A master of tango can
+be seen by how they take a single step _walking_. Master guitar players play
+their _basic_ chords cleanly so that the tones ring clearly.
 
-We're going to take a look at a broken bit of code and determine where it's
-going wrong.
+Programmers constantly make the investment in continually improving their
+fundamentals. This module will guide you through your (re-)consideration of
+your fundamentals. Come back to this lesson as you grow as a programmer to
+marvel at how you and your process have improved.
 
-(Note for writer: Probably multi-call with some antipatternish abuse of each and
-(accumulation.)
+## A Basic Problem
 
-## Conclusion
+For centuries now, banks have made mortgages available to the public so that
+they can buy real estate. While mortgages have evolved a lot, the fundamental idea is
+that for a long time, you'll pay interest on the amount you owe the bank. After
+you have made all your payments, the bank will have received back their
+original amount _but will also_ have all the money you paid in interest. How
+much is that original amount _plus_ the total of all interest payments? How
+much is the "total cost" of the loan?
 
-By learning about common anti-patterns, we can learn to spot them in our own
-code and remove them in favor of stronger, more reliable programming solutions.
+Computers are great at calculating things like this. Let's use a Ruby class to
+tell us the answer.
 
-## Resources
+## Formula
 
-- Common anti-patterns
+We [found a formula][formula] on the internet and decided to code it into Ruby.
+
+![Formula for mortgage total cost](https://curriculum-content.s3.amazonaws.com/pfwtfp/pfwtfp-bug-fix/mortgage_formula.png)
+
+_Source: https://www.calcunation.com/calculator/mortgage-total-cost.php_
+
+## Code
+
+```ruby
+class TotalCostCalculator
+  attr_reader :description, :cost
+
+  def initialize(description="A sun-drenched paradise", cost=325000, rate=0.02, mortgage_years)
+    @description = description
+    @cost = cost
+    @rate = rate
+    @term = 12 * mortgage_years
+  end
+
+  def total_loan_cost
+    @tlc ||= ((@rate * cost) / 1 - (1 + @rate) ** ( -1 * @term) ) * @term
+  end
+end
+
+calc = TotalCostCalculator.new("A paradise in Barbados", 250000, 6.5, 5)
+puts calc.total_loan_cost
+```
+
+## Result
+
+To finance a $250,000 island paradise, it will cost: $97,500,000.00.
+
+No wonder banks love mortgages so much! To finance my dream-house it will cost
+nearly 400 times the cost of the property!
+
+Wait. Does that seem _reasonable_? Using the [calculator site][formula] we see
+that the answer _they_ have is closer to $293,492.22. We have a bug.
+
+## Fix It
+
+Most professional programmers spend the majority of their time editing and
+maintaining code written by other people. As a result, take this broken code
+and make it work. The result of $293,492.22 is right.
+
+Since we're focusing on our fundamentals, keep track of how long this debugging
+takes.  Don't let this number stress you out: to improve, we need to know
+where we're struggling.
+
+## Next Steps
+
+In the next lesson, we're going to ask you to fill out a survey so that you can
+track your improvement.  We'll _also_ provide you our fix.
+
+[formula]: https://www.calcunation.com/calculator/mortgage-total-cost.php
