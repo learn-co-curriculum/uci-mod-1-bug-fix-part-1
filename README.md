@@ -1,5 +1,9 @@
 # Bug Fix Lab
 
+## Learning Goals
+
+* Debug a sufficiently complex Ruby program, while recording your debugging process
+
 ## Introduction
 
 In this module we're going to look at the fundamental behaviors of programmers.
@@ -89,7 +93,9 @@ trailing factions of cents).
 
 Since we're focusing on our fundamentals, keep track of how long this debugging
 takes.  Don't let this time stress you out: to improve, we need to know where
-we're struggling.
+we're struggling. Take notes of where you start, what tools you used. These
+don't need to be detailed notes, but we want to start _thinking deeply_ about
+our process(es) of engaging with code.
 
 ## Next Steps
 
