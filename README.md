@@ -2,19 +2,19 @@
 
 ## Learning Goals
 
-* Debug a sufficiently complex Ruby program, while recording your debugging process
+- Debug a sufficiently complex Ruby program, while recording your debugging process
 
 ## Introduction
 
-In this module we're going to look at the fundamental behaviors of programmers.
-While it might _feel_ basic, focusing here has a force-multiplying effect.
-Improvements here magnify through every second of your time programming.
+In this section, we are going to look at the fundamental behaviors of
+programmers. While it might _feel_ basic, focusing here has a force-multiplying
+effect. Improvements here magnify through every second of your time programming.
 
 It's similar to martial arts, dancing, or practicing an instrument. The master
 of [Tai Chi][] is known by a perfect, centered [horse stance][]. A master of
 [tango][] can be seen by how they take a single step _walking_. Master guitar
-players play their _basic_ chords cleanly so that the [tones ring
-clearly][paco].
+players play their _basic_ chords cleanly so that the
+[tones ring clearly][paco].
 
 Programmers constantly make the investment in continually improving their
 fundamentals. This module will guide you through your (re-)consideration of
@@ -41,13 +41,13 @@ We [found a formula][formula] on the internet and decided to code it into Ruby.
 
 ![Formula for mortgage total cost](https://curriculum-content.s3.amazonaws.com/pfwtfp/pfwtfp-bug-fix/mortgage_formula.png)
 
-|Letter|Meaning                       |
-|------|------------------------------|
-|r     |Monthly Interest Rate         |
-|P     |Principal Amount on the Loan  |
-|N     |Total # of Months for the loan|
+| Letter | Meaning                        |
+| ------ | ------------------------------ |
+| r      | Monthly Interest Rate          |
+| P      | Principal Amount on the Loan   |
+| N      | Total # of Months for the loan |
 
-_Source: https://www.calcunation.com/calculator/mortgage-total-cost.php_
+_Source:https://www.calcunation.com/calculator/mortgage-total-cost.php_
 
 ## Code
 
@@ -76,7 +76,7 @@ puts calc.total_loan_cost
 
 ## Result
 
-To finance this property, it will cost: $97,500,000.00.
+To finance this property, it will cost $97,500,000.00.
 
 No wonder banks love mortgages so much! To finance my dream-house it will cost
 nearly 400 times the cost of the property!
@@ -92,7 +92,7 @@ and make it work. The result of $293,492.22 is right (don't worry about
 trailing factions of cents).
 
 Since we're focusing on our fundamentals, keep track of how long this debugging
-takes.  Don't let this time stress you out: to improve, we need to know where
+takes. Don't let this time stress you out: to improve, we need to know where
 we're struggling. Take notes of where you start, what tools you used. These
 don't need to be detailed notes, but we want to start _thinking deeply_ about
 our process(es) of engaging with code.
@@ -100,10 +100,10 @@ our process(es) of engaging with code.
 ## Next Steps
 
 In the next lesson, we're going to ask you to fill out a survey so that you can
-track your improvement.  We'll _also_ provide you our fix.
+track your improvement. We'll _also_ provide you our fix.
 
 [formula]: https://www.calcunation.com/calculator/mortgage-total-cost.php
-[Tai Chi]: https://en.wikipedia.org/wiki/Tai_chi
+[tai chi]: https://en.wikipedia.org/wiki/Tai_chi
 [horse stance]: http://taichibasics.com/tai-chi-stances/
 [tango]: https://www.youtube.com/watch?v=bXhQNRsH3uc
 [paco]: https://www.pri.org/stories/2012-04-23/video-flamenco-music-legend-paco-de-luc
